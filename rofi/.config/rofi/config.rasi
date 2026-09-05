@@ -1,0 +1,121 @@
+configuration {
+    modi: "drun,run,window";
+    show-icons: true;
+    font: "JetBrainsMono NF Medium 10";
+}
+
+* {
+    bg:         #000000;
+    bg-alt:     #323232;
+    fg:         #ffffff;
+    fg-alt:     #888888;
+
+    border:     #285577;
+    selected:   #285577;
+    selected-fg:#ffffff;
+
+    urgent:     #900000;
+}
+
+window {
+    width: 25%;
+    location: center;
+    anchor: center;
+
+    background-color: @bg;
+    border: 1px;
+    border-color: @border;
+    border-radius: 0px;
+
+    padding: 8px;
+}
+
+mainbox {
+    spacing: 6px;
+}
+
+inputbar {
+    background-color: @bg-alt;
+
+    border: 1px;
+    border-color: @border;
+    border-radius: 0px;
+
+    padding: 6px;
+    children: [ prompt, entry ];
+}
+
+prompt {
+    text-color: @fg;
+    padding: 0px 6px 0px 0px;
+}
+
+entry {
+    text-color: @fg;
+    placeholder: "Search";
+    placeholder-color: @fg-alt;
+}
+
+listview {
+    background-color: transparent;
+    lines: 10;
+}
+
+element {
+    background-color: transparent;
+    text-color: #ffffff;
+}
+
+element normal.normal {
+    background-color: #000000;
+    text-color: #ffffff;
+}
+
+element normal.active {
+    background-color: #000000;
+    text-color: #ffffff;
+}
+
+element normal.urgent {
+    background-color: #000000;
+    text-color: #ffffff;
+}
+
+element selected.normal {
+    background-color: #285577;
+    text-color: #ffffff;
+}
+
+element selected.active {
+    background-color: #285577;
+    text-color: #ffffff;
+}
+
+element selected.urgent {
+    background-color: #900000;
+    text-color: #ffffff;
+}
+
+element alternate.normal {
+    background-color: #000000;
+    text-color: #ffffff;
+}
+
+element alternate.active {
+    background-color: #000000;
+    text-color: #ffffff;
+}
+
+element alternate.urgent {
+    background-color: #000000;
+    text-color: #ffffff;
+}
+
+element-icon {
+    background-color: inherit;
+}
+
+element-text {
+    background-color: inherit;
+    text-color: inherit;
+}

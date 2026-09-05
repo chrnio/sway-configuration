@@ -1,0 +1,96 @@
+* {
+    border: none;
+    border-radius: 0;
+    min-height: 0;
+
+    font-family: "JetBrainsMono Nerd Font Medium";
+    /*font-weight: 500; */
+    font-size: 12px;
+}
+
+window#waybar {
+    background: #000000;
+    color: #ffffff;
+}
+
+/* i3-style workspaces */
+
+#workspaces {
+    margin: 0;
+    padding: 0;
+}
+
+#workspaces button {
+    min-width: 20px;
+    min-height: 24px;
+
+    padding: 0;
+    margin: 0;
+
+    background: #000000;
+    color: #ffffff;
+
+    border: none;
+    border-radius: 0;
+}
+
+#workspaces button.focused {
+    background: #285577;
+    color: #ffffff;
+}
+
+#workspaces button.active {
+    background: #285577;
+    color: #ffffff;
+}
+
+#workspaces button.urgent {
+    background: #900000;
+    color: #ffffff;
+}
+
+/* Don't introduce Waybar-style hover effects */
+#workspaces button:hover {
+    background: #285577;
+    color: #ffffff;
+}
+
+/* Center */
+
+#clock {
+    color: #ffffff;
+    padding: 0 8px;
+}
+
+/* Right side */
+
+#cpu,
+#memory,
+#pulseaudio,
+#battery,
+#tray {
+    color: #ffffff;
+    padding: 0 8px;
+}
+
+/* i3-style separators */
+
+#cpu {
+    border-left: 1px solid #666666;
+}
+
+#memory {
+    border-left: 1px solid #666666;
+}
+
+#pulseaudio {
+    border-left: 1px solid #666666;
+}
+
+#battery {
+    border-left: 1px solid #666666;
+}
+
+#tray {
+    border-left: 1px solid #666666;
+}
