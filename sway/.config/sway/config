@@ -18,6 +18,9 @@ set $menu rofi -show drun
 #         -terminal '$term'
 # set $menu $rofi_cmd -show combi -combi-modes drun
 
+# monitor
+#output HDMI-A-1 mode 1920x1080@144Hz
+
 exec mako
 exec waybar
 exec /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
