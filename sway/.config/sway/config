@@ -9,17 +9,14 @@ set $right l
 
 set $term kitty
 set $browser librewolf
-set $altBrowser google-chrome-stable
+set $altBrowser helium-browser
 set $terminalFileManager "kitty -e yazi"
 set $graphicalFileManager nautilus
 set $bluetoothManager "kitty -e bluetui"
 set $menu rofi -show drun
-# set $rofi_cmd rofi \
-#         -terminal '$term'
-# set $menu $rofi_cmd -show combi -combi-modes drun
 
 # monitor
-#output HDMI-A-1 mode 1920x1080@144Hz
+output HDMI-A-1 mode 1920x1080@60Hz
 
 exec mako
 exec waybar
@@ -27,14 +24,12 @@ exec /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 exec --no-startup-id gnome-keyring-daemon --start --components=secrets
 exec --no-startup-id nm-applet 
 
-# exec swayidle -w \
-#     timeout 300 'swaylock -f' \
-#     timeout 330 'swaymsg "output * dpms off"' \
-#     resume 'swaymsg "output * dpms on"' \
-#     timeout 600 'systemctl suspend' \
-#     before-sleep 'swaylock -f'
-#
-
+exec swayidle -w \
+    timeout 300 'swaylock -f' \
+    timeout 330 'swaymsg "output * dpms off"' \
+    resume 'swaymsg "output * dpms on"' \
+    timeout 600 'systemctl suspend' \
+    before-sleep 'swaylock -f'
 
 # 15 mins before idle timeout
 exec swayidle -w \
@@ -44,7 +39,7 @@ exec swayidle -w \
 bindsym $mod+Escape exec swaylock -f -i /home/chrnio/Pictures/Wallpapers/moon.png
 
 # wallpaper
-output * bg /home/chrnio/Pictures/Wallpapers/low-light-city.png fill
+output * bg /home/chrn/Pictures/Wallpapers/N09.png fill
 
 input type:touchpad {
     tap enabled
@@ -83,7 +78,7 @@ input "1133:16529:Logitech_Wireless_Mouse" {
     bindsym $mod+o exec obsidian
     bindsym $mod+Slash exec proton-pass
 
-    bindsym $mod+Alt+w exec google-chrome-stable --app="https://web.whatsapp.com"
+    bindsym $mod+Alt+w exec $altBrowser --app="https://web.whatsapp.com"
 
     floating_modifier $mod normal
     bindsym $mod+Shift+r reload
