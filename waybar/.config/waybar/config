@@ -14,8 +14,8 @@
         "cpu",
         "memory",
         "pulseaudio",
-        "clock",
         "battery",
+        "clock",
         "tray"
     ],
 
