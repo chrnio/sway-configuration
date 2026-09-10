@@ -60,7 +60,7 @@ input type:keyboard {
 
 input "1133:16529:Logitech_Wireless_Mouse" {
     accel_profile "flat"
-    pointer_accel "0.4"
+    pointer_accel "0.3"
 }
 
     bindsym $mod+Return exec $term
