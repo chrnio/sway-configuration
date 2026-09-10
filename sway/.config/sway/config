@@ -197,22 +197,6 @@ bindsym $mod+r mode "resize"
     bindsym --locked XF86MonBrightnessDown exec brightnessctl set 5%-
     bindsym --locked XF86MonBrightnessUp exec brightnessctl set 5%+
 
-### swaybar
-# bar {
-#     position bottom
-#     status_command i3status
-#
-#     colors {
-#         statusline #ffffff
-#         background #000000
-#
-#         focused_workspace   #4c7899 #285577 #ffffff
-#         active_workspace    #333333 #5f676a #ffffff
-#         inactive_workspace  #323232 #323232 #888888
-#         urgent_workspace    #900000 #900000 #ffffff
-#     }
-# }
-
 # borders
 default_border pixel 2
 default_floating_border pixel 2
