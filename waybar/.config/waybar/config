@@ -8,14 +8,13 @@
         "sway/workspaces"
     ],
 
-    "modules-center": [
-        "clock"
-    ],
+    "modules-center": [],
 
     "modules-right": [
         "cpu",
         "memory",
         "pulseaudio",
+        "clock",
         "battery",
         "tray"
     ],
@@ -27,7 +26,7 @@
     },
 
     "clock": {
-        "format": "{:%H:%M %d/%m/%Y}",
+        "format": "{:%d/%m/%Y %H:%M}",
         "tooltip": false
     },
 

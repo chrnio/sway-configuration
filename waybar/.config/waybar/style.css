@@ -55,18 +55,12 @@ window#waybar {
     color: #ffffff;
 }
 
-/* Center */
-
-#clock {
-    color: #ffffff;
-    padding: 0 8px;
-}
-
 /* Right side */
 
 #cpu,
 #memory,
 #pulseaudio,
+#clock,
 #battery,
 #tray {
     color: #ffffff;
@@ -84,6 +78,10 @@ window#waybar {
 }
 
 #pulseaudio {
+    border-left: 1px solid #666666;
+}
+
+#clock {
     border-left: 1px solid #666666;
 }
 
