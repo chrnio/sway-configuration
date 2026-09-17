@@ -7,12 +7,12 @@ set $down j
 set $up k
 set $right l
 
-set $term kitty
+set $term ghostty
 set $browser librewolf
 set $altBrowser helium-browser
-set $terminalFileManager "kitty -e yazi"
+set $terminalFileManager "ghostty -e yazi"
 set $graphicalFileManager nautilus
-set $bluetoothManager "kitty -e bluetui"
+set $bluetoothManager "ghostty -e bluetui"
 set $menu rofi -show drun
 
 # monitor
@@ -28,12 +28,12 @@ exec /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 exec --no-startup-id gnome-keyring-daemon --start --components=secrets
 exec --no-startup-id nm-applet 
 
-exec swayidle -w \
-    timeout 300 'swaylock -f' \
-    timeout 330 'swaymsg "output * dpms off"' \
-    resume 'swaymsg "output * dpms on"' \
-    timeout 600 'systemctl suspend' \
-    before-sleep 'swaylock -f'
+# exec swayidle -w \
+#     timeout 300 'swaylock -f' \
+#     timeout 330 'swaymsg "output * dpms off"' \
+#     resume 'swaymsg "output * dpms on"' \
+#     timeout 600 'systemctl suspend' \
+#     before-sleep 'swaylock -f'
 
 # 15 mins before idle timeout
 exec swayidle -w \
@@ -43,7 +43,7 @@ exec swayidle -w \
 bindsym $mod+Escape exec swaylock -f -i /home/chrnio/Pictures/Wallpapers/moon.png
 
 # wallpaper
-output * bg /home/chrn/Pictures/Wallpapers/N09.png fill
+output * bg /home/chrnio/Pictures/Wallpapers/lenin-peak-kyrgyzstan-ee-3840x2160.jpg fill
 
 input type:touchpad {
     tap enabled
@@ -60,7 +60,7 @@ input type:keyboard {
 
 input "1133:16529:Logitech_Wireless_Mouse" {
     accel_profile "flat"
-    pointer_accel "0.3"
+    pointer_accel "0.35"
 }
 
     bindsym $mod+Return exec $term
