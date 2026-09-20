@@ -1,7 +1,7 @@
 configuration {
     modi: "drun,run,window";
     show-icons: true;
-    font: "JetBrainsMono NF Medium 10";
+    font: "JetBrainsMono NFP SemiBold 10";
 }
 
 * {
