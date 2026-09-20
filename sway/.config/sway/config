@@ -21,7 +21,6 @@ output HDMI-A-1 mode 1920x1080@144Hz
 # laptop
 #output HDMI-A-1 mode 1920x1080@60Hz
 
-
 exec mako
 exec waybar
 exec /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
@@ -43,7 +42,7 @@ exec swayidle -w \
 bindsym $mod+Escape exec swaylock -f -i /home/chrnio/Pictures/Wallpapers/moon.png
 
 # wallpaper
-output * bg /home/chrnio/Pictures/Wallpapers/lenin-peak-kyrgyzstan-ee-3840x2160.jpg fill
+output * bg /home/chrnio/Pictures/Wallpapers/mount-fuji-lake-3840x2160.jpg fill
 
 input type:touchpad {
     tap enabled
