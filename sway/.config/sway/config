@@ -10,9 +10,9 @@ set $right l
 set $term ghostty
 set $browser librewolf
 set $altBrowser helium-browser
-set $terminalFileManager "ghostty -e yazi"
+set $terminalFileManager "$term -e yazi"
 set $graphicalFileManager nautilus
-set $bluetoothManager "ghostty -e bluetui"
+set $bluetoothManager "$term -e bluetui"
 set $menu rofi -show drun
 
 # monitor
@@ -59,7 +59,7 @@ input type:keyboard {
 
 input "1133:16529:Logitech_Wireless_Mouse" {
     accel_profile "flat"
-    pointer_accel "0.35"
+    pointer_accel "0.3"
 }
 
     bindsym $mod+Return exec $term
