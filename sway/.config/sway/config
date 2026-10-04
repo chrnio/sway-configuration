@@ -7,7 +7,7 @@ set $down j
 set $up k
 set $right l
 
-set $term ghostty
+set $term kitty
 set $browser librewolf
 set $altBrowser helium-browser
 set $terminalFileManager "$term -e yazi"
@@ -36,13 +36,13 @@ exec --no-startup-id nm-applet
 
 # 15 mins before idle timeout
 exec swayidle -w \
-    timeout 900 'swaylock -f -i /home/chrnio/Pictures/Wallpapers/moon.png' \
-    before-sleep 'swaylock -f -i /home/chrnio/Pictures/Wallpapers/moon.png'
+    timeout 900 'swaylock -f -i /home/charan/Pictures/Wallpapers/za-moon.png' \
+    before-sleep 'swaylock -f -i /home/charan/Pictures/Wallpapers/za-moon.png'
 
-bindsym $mod+Escape exec swaylock -f -i /home/chrnio/Pictures/Wallpapers/moon.png
+bindsym $mod+Escape exec swaylock -f -i /home/charan/Pictures/Wallpapers/za-moon.png
 
 # wallpaper
-output * bg /home/chrnio/Pictures/Wallpapers/mount-fuji-lake-3840x2160.jpg fill
+output * bg /home/charan/Pictures/Wallpapers/za-moon.png fill
 
 input type:touchpad {
     tap enabled
@@ -81,7 +81,7 @@ input "1133:16529:Logitech_Wireless_Mouse" {
     bindsym $mod+o exec obsidian
     bindsym $mod+Slash exec proton-pass
 
-    bindsym $mod+Alt+w exec $altBrowser --app="https://web.whatsapp.com"
+    bindsym Ctrl+Alt+w exec $altBrowser --app="https://web.whatsapp.com"
 
     floating_modifier $mod normal
     bindsym $mod+Shift+r reload
