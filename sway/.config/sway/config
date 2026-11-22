@@ -8,12 +8,18 @@ set $up k
 set $right l
 
 set $term kitty
-set $browser librewolf
-set $altBrowser helium-browser
+set $browser firefox
+set $altBrowser brave-origin
 set $terminalFileManager "$term -e yazi"
 set $graphicalFileManager nautilus
 set $bluetoothManager "$term -e bluetui"
 set $menu rofi -show drun
+set $wallpaper /home/charan/Pictures/Wallpapers/countryside.jpg
+
+# Cursor
+seat * xcursor_theme breeze_cursors 24
+set $XCURSOR_THEME breeze_cursors
+set $XCURSOR_SIZE 24
 
 # monitor
 output HDMI-A-1 mode 1920x1080@144Hz
@@ -27,6 +33,12 @@ exec /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 exec --no-startup-id gnome-keyring-daemon --start --components=secrets
 exec --no-startup-id nm-applet 
 
+show_marks yes
+focus_follows_mouse no
+#focus_on_window_activation none
+focus_wrapping no
+mouse_warping none
+
 # exec swayidle -w \
 #     timeout 300 'swaylock -f' \
 #     timeout 330 'swaymsg "output * dpms off"' \
@@ -36,14 +48,15 @@ exec --no-startup-id nm-applet
 
 # 15 mins before idle timeout
 exec swayidle -w \
-    timeout 900 'swaylock -f -i /home/charan/Pictures/Wallpapers/za-moon.png' \
-    before-sleep 'swaylock -f -i /home/charan/Pictures/Wallpapers/za-moon.png'
+    timeout 900 'swaylock -f -i $wallpaper' \
+    before-sleep 'swaylock -f -i $wallpaper'
 
-bindsym $mod+Escape exec swaylock -f -i /home/charan/Pictures/Wallpapers/za-moon.png
+bindsym $mod+Escape exec swaylock -f -i $wallpaper
 
 # wallpaper
-output * bg /home/charan/Pictures/Wallpapers/za-moon.png fill
+output * bg $wallpaper fill
 
+# Input
 input type:touchpad {
     tap enabled
     tap_button_map lrm
@@ -54,12 +67,12 @@ input type:touchpad {
 
 input type:keyboard {
     repeat_rate 50
-    repeat_delay 200
+    repeat_delay 175
 }
 
 input "1133:16529:Logitech_Wireless_Mouse" {
     accel_profile "flat"
-    pointer_accel "0.3"
+    pointer_accel "-0.4"
 }
 
     bindsym $mod+Return exec $term
@@ -77,10 +90,10 @@ input "1133:16529:Logitech_Wireless_Mouse" {
     bindsym $mod+comma exec neovide ~/.config/sway/config
     bindsym $mod+z exec zeditor
     bindsym $mod+Shift+d exec discord
-    bindsym $mod+m exec spotify-launcher
     bindsym $mod+o exec obsidian
     bindsym $mod+Slash exec proton-pass
-
+    bindsym $mod+i exec grim -g "$(slurp)" - | imv -
+    bindsym $mod+b workspace back_and_forth
     bindsym Ctrl+Alt+w exec $altBrowser --app="https://web.whatsapp.com"
 
     floating_modifier $mod normal
@@ -197,8 +210,8 @@ bindsym $mod+r mode "resize"
     bindsym --locked XF86MonBrightnessUp exec brightnessctl set 5%+
 
 # borders
-default_border pixel 2
-default_floating_border pixel 2
+default_border pixel 1
+default_floating_border pixel none
 
 # screenshot
 bindsym $mod+Shift+s exec \
